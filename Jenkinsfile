@@ -1,5 +1,5 @@
 pipeline{
-    agentany
+    agent any
     stages{
         stage('Checkout') {
             steps{
@@ -8,10 +8,10 @@ pipeline{
         }
         stage('GenerateReport') {
             steps{
-                bat 'pythonapp.py'
+                bat 'python app.py'
             }
         }
-        stage('ArchiveReport'){
+        stage('Archive Report'){
             steps{
                 archiveArtifacts artifacts: 'report.txt',fingerprint:true
             }

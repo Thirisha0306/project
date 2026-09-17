@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Checkout') {
             steps{
-                gitbranch: 'main', url: 'https://github.com/Thirisha0306/project.git'
+                git branch: 'main', url: 'https://github.com/Thirisha0306/project.git'
             }
         }
         stage('GenerateReport') {

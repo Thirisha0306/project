@@ -13,7 +13,7 @@ pipeline{
         }
         stage('ArchiveReport'){
             steps{
-                archiveArtifactsartifacts: 'report.txt',fingerprint:true
+                archiveArtifacts artifacts: 'report.txt',fingerprint:true
             }
         }
     }
